@@ -1,9 +1,9 @@
 // calculator.js
 // Supported operations:
-//  - add: a + b
-//  - sub: a - b
-//  - mul: a * b
-//  - div: a / b  (division by zero throws an Error)
+//  - addition: a + b
+//  - subtraction: a - b
+//  - multiplication: a * b
+//  - division: a / b  (division by zero throws an Error)
 
 // Parse a value into a number and validate
 function toNumber(value) {
@@ -12,27 +12,27 @@ function toNumber(value) {
   return n;
 }
 
-function add(a, b) {
+function addition(a, b) {
   return toNumber(a) + toNumber(b);
 }
 
-function subtract(a, b) {
+function subtraction(a, b) {
   return toNumber(a) - toNumber(b);
 }
 
-function multiply(a, b) {
+function multiplication(a, b) {
   return toNumber(a) * toNumber(b);
 }
 
-function divide(a, b) {
+function division(a, b) {
   const bn = toNumber(b);
   if (bn === 0) throw new Error('Division by zero');
   return toNumber(a) / bn;
 }
 
 module.exports = {
-  add,
-  subtract,
-  multiply,
-  divide,
+  addition,
+  subtraction,
+  multiplication,
+  division,
 };

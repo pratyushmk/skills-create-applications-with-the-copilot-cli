@@ -7,7 +7,7 @@
 //   node src/cli.js div 10 2
 
 const readline = require('readline');
-const { add, subtract, multiply, divide } = require('./calculator');
+const { addition, subtraction, multiplication, division } = require('./calculator');
 
 function printHelp() {
   console.log('Usage: node src/cli.js <op> <a> <b>');
@@ -18,13 +18,13 @@ function printHelp() {
 function compute(op, a, b) {
   switch (op) {
     case 'add':
-      return add(a, b);
+      return addition(a, b);
     case 'sub':
-      return subtract(a, b);
+      return subtraction(a, b);
     case 'mul':
-      return multiply(a, b);
+      return multiplication(a, b);
     case 'div':
-      return divide(a, b);
+      return division(a, b);
     default:
       throw new Error(`Unknown operation: ${op}`);
   }
